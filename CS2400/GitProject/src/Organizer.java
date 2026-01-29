@@ -23,6 +23,19 @@ public class Organizer {
 
 	public static ArrayList <User> organizeByFirst(ArrayList <User> database){
 		
+		for(int i = 0 ; i < database.size() - 1 ; i++){
+
+			for(int j = 0 ; j < database.size() - 1 - i ; j++){
+				if( database.get(j).id() > database.get( j + 1 ).id() ){
+				User temp = database.get(j);
+				database.set(j, database.get(j + 1));
+				database.set(j + 1, temp);
+				}
+			}
+			
+		}
+
+		return database;
 	}
 
 	public static ArrayList <User> organizeByID(ArrayList <User> database){
