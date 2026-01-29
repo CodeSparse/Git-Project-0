@@ -13,7 +13,7 @@ public class Organizer {
 
 		ArrayList <User> userDatabase = createUserDatabase();
 
-		userDatabase = organizeByID(userDatabase);
+		userDatabase = organizeByFirst(userDatabase);
 
 		for( User user : userDatabase){
 			System.out.println(user);
@@ -22,6 +22,21 @@ public class Organizer {
 	}
 
 	public static ArrayList <User> organizeByFirst(ArrayList <User> database){
+
+		
+		for(int i = 0 ; i < database.size() - 1 ; i++){
+
+			for(int j = 0 ; j < database.size() - 1 - i ; j++){
+				if( database.get(j).first_name().compareTo(database.get( j + 1 ).first_name()) < -1 ){
+				User temp = database.get(j);
+				database.set(j, database.get(j + 1));
+				database.set(j + 1, temp);
+				}
+			}
+			
+		}
+
+		return database;
 		
 	}
 
