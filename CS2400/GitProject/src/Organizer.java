@@ -21,7 +21,9 @@ public class Organizer {
 		
 	}
 
-	public static void organizeByFirst(){}
+	public static ArrayList <User> organizeByFirst(ArrayList <User> database){
+		
+	}
 
 	public static ArrayList <User> organizeByID(ArrayList <User> database){
 
