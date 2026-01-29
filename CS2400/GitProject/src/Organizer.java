@@ -17,7 +17,10 @@ public class Organizer {
 
 		for( User user : userDatabase){
 			System.out.println(user);
+			System.out.println(user.first_name());
 		}
+
+
 		
 	}
 
