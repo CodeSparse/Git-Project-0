@@ -56,6 +56,8 @@ public class Organizer {
 			
 		}
 
+		System.out.println("Hello");
+
 		return database;
 	}
 
